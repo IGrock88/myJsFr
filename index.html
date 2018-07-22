@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jsMyFr.js"></script>
+</head>
+<body>
+
+<div id="testid">asdf</div>
+<div id="testHtml"></div>
+
+<div class="testclass">test2class1</div>
+<div class="testclass">test2class2</div>
+
+<input type="text" name="testname" value="asdfasdf">
+
+<div id="testattr" about="test">testattr</div>
+
+<p>Test TAG</p>
+
+
+
+<script>
+   var testId = $('#testid');
+   console.log(testId);
+   console.log(testId.text());
+   testId.text('Hello');
+   testId.attr('about', 'testNew');
+
+   var testClass = $('.testclass');
+   console.log(testClass);
+   console.log(testClass.text());
+   console.log(testClass.text(null, 1));
+   testClass.text('Hello all');
+
+   $('#testHtml').setHtml('<h1>TEST HTML</h1>');
+
+   var testAttr = $('#testattr');
+   console.log(testAttr.attr('about'));
+   testAttr.attr('about', 'confirm');
+   console.log(testAttr.attr('about'));
+
+   var testName = $('^testname');
+   console.log(testName);
+   testName.val('test');
+   console.log(testName.val());
+
+   var testTag = $('p');
+   console.log(testTag);
+
+
+
+</script>
+</body>
+</html>
